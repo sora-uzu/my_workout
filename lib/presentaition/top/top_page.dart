@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_workout/presentaition/main/top/top_model.dart';
-import 'package:my_workout/save/save_page.dart';
+import 'package:my_workout/presentaition/top/top_model.dart';
+import 'package:my_workout/presentaition/save/save_page.dart';
 import 'package:provider/provider.dart';
 
 class TopPage extends StatelessWidget {
