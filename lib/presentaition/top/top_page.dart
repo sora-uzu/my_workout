@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_workout/presentaition/graph/graph_page.dart';
+import 'package:my_workout/presentaition/list/list_page.dart';
+import 'package:my_workout/presentaition/my_profile/my_profile_page.dart';
 import 'package:my_workout/presentaition/top/top_model.dart';
 import 'package:my_workout/presentaition/save/save_page.dart';
 import 'package:provider/provider.dart';
@@ -6,6 +9,9 @@ import 'package:provider/provider.dart';
 class TopPage extends StatelessWidget {
   final List<String> _tabNames = [
     "保存",
+    "グラフ",
+    "一覧",
+    "マイページ",
   ];
 
   @override
@@ -37,6 +43,18 @@ class TopPage extends StatelessWidget {
                       icon: Icon(Icons.edit),
                       title: Text(_tabNames[0]),
                     ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.edit),
+                      title: Text(_tabNames[1]),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.edit),
+                      title: Text(_tabNames[2]),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.edit),
+                      title: Text(_tabNames[3]),
+                    ),
                   ],
                 ),
               ));
@@ -51,6 +69,9 @@ class TopPage extends StatelessWidget {
     return Stack(
       children: <Widget>[
         _tabPage(currentIndex, 0, SavePage()),
+        _tabPage(currentIndex, 1, GraphPage()),
+        _tabPage(currentIndex, 2, ListPage()),
+        _tabPage(currentIndex, 3, MyProfilePage()),
       ],
     );
   }
